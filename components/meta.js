@@ -25,6 +25,11 @@ export default function Meta({ pageTitle, pageDesc }) {
       <meta property="og:description" content={desc} />
       <link rel="canonical" href={url} />
       <meta property="og:url" content={url} />
+      <meta property="og:site_name" content={siteTitle} />
+      <meta property="og:type" content={siteType} />
+      <meta property="og:local" content={siteLocale} />
+      <link rel="icon" href={siteIcon} />
+      <link rel="apple-touch-icon" href={siteIcon} />
     </Head>
   );
 }
