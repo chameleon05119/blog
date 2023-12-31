@@ -17,7 +17,7 @@ export default function Social() {
         </a>
       </li>
       <li>
-        <a href="https://www.facebok.com">
+        <a href="https://www.facebook.com">
           <FontAwesomeIcon icon={faFacebook} />
           <span className="sr-only">Facebook</span>
         </a>
