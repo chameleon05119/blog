@@ -1,7 +1,7 @@
 import Container from "@/components/container";
 import Hero from "@/components/hero";
 import PostBody from "@/components/post-body";
-import Contact from "@/components/contanc";
+import Contact from "@/components/contact";
 import {
   TwoColumn,
   TwoColumnMain,
