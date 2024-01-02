@@ -15,7 +15,7 @@ import Image from "next/image";
 import { getPlaiceholder } from "plaiceholder";
 import { eyechatchLocal } from "lib/constants";
 
-export default function Schedule({
+export default function Post({
   title,
   publish,
   content,
