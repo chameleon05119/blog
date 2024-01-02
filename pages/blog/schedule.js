@@ -12,6 +12,7 @@ import {
 import ConvertBody from "@/components/convert-body";
 import PostCategories from "@/components/post-categories";
 import Image from "next/image";
+import { getPlaiceholder } from "plaiceholder";
 import { eyechatchLocal } from "lib/constants";
 
 export default function Schedule({
@@ -43,6 +44,8 @@ export default function Schedule({
             height={eyecatch.height}
             sizes="(min-width: 1152px) 1152px, 100vw"
             priority
+            placeholder="blur"
+            blurDataURL={eyecatch.blurDataURL}
           />
         </figure>
 
@@ -66,6 +69,8 @@ export async function getStaticProps() {
   const post = await getPostBySlug(slug);
   const description = extractText(post.content);
   const eyecatch = post.eyecatch ?? eyechatchLocal;
+  const { base64 } = await getPlaiceholder(eyecatch.url);
+  eyecatch.blurDataURL = base64;
 
   return {
     props: {
