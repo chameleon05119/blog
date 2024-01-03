@@ -1,6 +1,29 @@
 .list {
   display: flex;
+  flex-direction: column;
   gap: 2em;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    display: none;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+  }
+}
+
+@media (max-width: 767px) {
+  .close .btn {
+    color: blue;
+  }
+
+  .open .btn {
+    color: red;
+  }
 }
 
 @media (hover: hover) {
