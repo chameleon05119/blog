@@ -16,7 +16,8 @@ export default function Nav() {
   return (
     <nav className={navIsOpen ? styles.open : styles.close}>
       <button onClick={toggleNav} className={styles.btn}>
-        MENU
+        <span className={styles.bar}></span>
+        <span className="sr-only">MENU</span>
       </button>
       <ul className={styles.list}>
         <li>
