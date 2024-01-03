@@ -15,6 +15,18 @@ export default function Nav() {
 
   return (
     <nav className={navIsOpen ? styles.open : styles.close}>
+      {navIsOpen && (
+        <style jsx global>{`
+          @media (max-width: 767px) {
+            body {
+              overflow: hideen;
+              position: fixed;
+              width: 100%;
+            }
+          }
+        `}</style>
+      )}
+
       <button onClick={toggleNav} className={styles.btn}>
         <span className={styles.bar}></span>
         <span className="sr-only">MENU</span>
