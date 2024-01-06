@@ -10,7 +10,14 @@ import {
 } from "@/components/two-colmun";
 import Accordion from "@/components/accordion";
 import Image from "next/image";
-import eyecatch from "@/images/about.jpg";
+// import eyecatch from "@/images/about.jpg";
+
+const eyecatch = {
+  src: "https://images.microcms-assets.io/assets/003f903002c8432ab9fb1b4ea08cc3e6/6eb173da5626439e93f7b76ef319e589/about.jpg",
+  height: 960,
+  widht: 1920,
+  blurDataURL: "data:image/jpeg;base64",
+};
 
 export default function About() {
   return (
