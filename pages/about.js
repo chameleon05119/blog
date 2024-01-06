@@ -15,7 +15,7 @@ import Image from "next/image";
 const eyecatch = {
   src: "https://images.microcms-assets.io/assets/003f903002c8432ab9fb1b4ea08cc3e6/6eb173da5626439e93f7b76ef319e589/about.jpg",
   height: 960,
-  widht: 1920,
+  width: 1920,
   blurDataURL: "data:image/jpeg;base64",
 };
 
