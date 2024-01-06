@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
     };
   }, [router.events]);
 
-  const getLayot = Component.getLayot || ((page) => page);
+  const getLayout = Component.getLayout || ((page) => page);
 
   return (
     <>
@@ -44,7 +44,7 @@ function MyApp({ Component, pageProps }) {
       `,
         }}
       />
-      <Layout>{getLayot(<Component {...pageProps} />)}</Layout>
+      <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
     </>
   );
 }
