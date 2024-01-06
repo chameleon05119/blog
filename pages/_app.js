@@ -21,6 +21,9 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleRouteChange);
     };
   }, [router.events]);
+
+  const getLayot = Component.getLayot || ((page) => page);
+
   return (
     <>
       <Script
@@ -41,9 +44,7 @@ function MyApp({ Component, pageProps }) {
       `,
         }}
       />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Layout>{getLayot(<Component {...pageProps} />)}</Layout>
     </>
   );
 }
